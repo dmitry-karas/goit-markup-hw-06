@@ -72,6 +72,9 @@ img {
   min-width: 100%;
   height: auto;
 }
+textarea {
+  resize: none;
+}
 /* ========== END BODY ========== */
 
 /* ========== HEADER ========== */
@@ -197,10 +200,14 @@ img {
   text-transform: uppercase;
   color: var(--white-text-color);
 }
-.hero-button {
+.hero-button,
+.submit-button {
+  display: block;
   min-width: 200px;
   min-height: 50px;
   padding: 10px 32px;
+  margin-left: auto;
+  margin-right: auto;
   border: none;
   border-radius: 4px;
 
@@ -643,9 +650,10 @@ img {
 .modal-window {
   position: relative;
 
-  margin: auto;
   width: 528px;
   min-height: 581px;
+  margin: auto;
+  padding: 40px;
   border-radius: 4px;
 
   background-color: var(--primary-background-color);
@@ -674,5 +682,84 @@ img {
   cursor: pointer;
 
   background-color: var(--primary-background-color);
+}
+.modal-form * {
+  /* outline: 1px solid red; */
+  /* width: 448px; */
+  /* display: flex;
+  flex-direction: column; */
+}
+.modal-action {
+  display: block;
+  margin-bottom: 12px;
+
+  font-size: 20px;
+  line-height: 1.15;
+  letter-spacing: 0.03em;
+
+  color: var(--title-text-color);
+}
+.form-field {
+  /* outline: 1px solid green; */
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+.form-field.textarea {
+  margin-bottom: 20px;
+}
+.form-field label {
+  margin-bottom: 4px;
+
+  font-size: 12px;
+  line-height: 1.16;
+
+  letter-spacing: 0.01em;
+
+  color: var(--primary-text-color);
+}
+.form-field input,
+.form-field textarea {
+  padding: 12px;
+
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+}
+.form-field textarea {
+  min-height: 120px;
+  padding-top: 12px;
+  padding-right: 16px;
+  padding-bottom: 12px;
+  padding-left: 16px;
+}
+.form-field textarea:placeholder-shown {
+  font-size: 12px;
+  line-height: 1.16;
+  letter-spacing: 0.01em;
+
+  color: rgba(117, 117, 117, 0.5);
+  /* color: teal; */
+}
+.form-checkbox {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+}
+.form-checkbox input {
+  margin-right: 8px;
+}
+
+.form-checkbox label {
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+
+  color: var(--primary-text-color);
+}
+.agreement-link {
+  text-decoration: underline;
+  color: var(--accent-color);
+}
+.submit-button {
 }
 /* ========== END MODAL WINDOW ========== */
