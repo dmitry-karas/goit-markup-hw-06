@@ -685,9 +685,6 @@ textarea {
 }
 .modal-form * {
   /* outline: 1px solid red; */
-  /* width: 448px; */
-  /* display: flex;
-  flex-direction: column; */
 }
 .modal-action {
   display: block;
@@ -732,13 +729,12 @@ textarea {
   padding-bottom: 12px;
   padding-left: 16px;
 }
-.form-field textarea:placeholder-shown {
+.form-field textarea::placeholder {
   font-size: 12px;
   line-height: 1.16;
   letter-spacing: 0.01em;
 
   color: rgba(117, 117, 117, 0.5);
-  /* color: teal; */
 }
 .form-checkbox {
   display: flex;
