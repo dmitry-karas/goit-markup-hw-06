@@ -791,6 +791,7 @@ textarea {
 }
 .agreement-link {
   text-decoration: underline;
+  text-decoration-skip-ink: none;
   color: var(--accent-color);
 }
 /* .agreement-link::after {
