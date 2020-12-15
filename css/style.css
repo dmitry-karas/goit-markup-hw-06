@@ -721,6 +721,13 @@ textarea {
   cursor: pointer;
 
   background-color: var(--primary-background-color);
+  fill: currentColor;
+
+  transition: color 250ms var(--timing-function);
+}
+.modal-close-btn:hover,
+.modal-close-btn:focus {
+  color: var(--accent-color);
 }
 .modal-form * {
   /* outline: 1px solid red; */
@@ -736,7 +743,6 @@ textarea {
   color: var(--title-text-color);
 }
 .form-field {
-  /* outline: 1px solid green; */
   position: relative;
   display: flex;
   flex-direction: column;
@@ -755,17 +761,26 @@ textarea {
 
   color: var(--primary-text-color);
 }
-.form-field input,
-.form-field textarea {
-  /* padding: 12px; */
+.form-input,
+.form-textarea {
   padding-top: 11px;
   padding-bottom: 11px;
   padding-left: 42px;
+  outline: none;
 
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
+
+  transition: border-color 250ms var(--timing-function);
 }
-.form-field textarea {
+.form-input:focus,
+.form-textarea:focus {
+  border-color: var(--accent-color);
+}
+.form-input:focus + .input-icon {
+  color: var(--accent-color);
+}
+.form-field .form-textarea {
   min-height: 120px;
   padding-top: 12px;
   padding-right: 16px;
@@ -784,16 +799,38 @@ textarea {
   position: absolute;
   left: 12px;
   bottom: 11px;
+  fill: currentColor;
+
+  transition: color 250ms var(--timing-function);
 }
 .form-checkbox {
   display: flex;
+  justify-content: center;
   align-items: center;
   margin-bottom: 30px;
 }
+.form-checkbox label {
+  display: flex;
+  align-items: center;
+}
+.check-icon {
+  color: var(--white-text-color);
+  margin-right: 8px;
+  border: 2px solid var(--title-text-color);
+  border-radius: 2px;
+  fill: currentColor;
+
+  transition: background-color 250ms var(--timing-function);
+  transition: border 250ms var(--timing-function);
+}
 .form-checkbox input {
+  position: absolute;
   margin-right: 8px;
 }
-
+.form-checkbox input:checked + .check-icon {
+  border: none;
+  background-color: var(--accent-color);
+}
 .form-checkbox label {
   font-size: 14px;
   line-height: 1.71;
