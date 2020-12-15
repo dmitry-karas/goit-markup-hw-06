@@ -820,8 +820,8 @@ textarea {
   border-radius: 2px;
   fill: currentColor;
 
-  transition: background-color 250ms var(--timing-function);
-  transition: border 250ms var(--timing-function);
+  transition: background-color 250ms var(--timing-function),
+    border-color 250ms var(--timing-function);
 }
 .form-checkbox input {
   position: absolute;
