@@ -560,7 +560,8 @@ textarea {
   display: flex;
   align-items: baseline;
 }
-.footer-address-container {
+.footer-address-wrapper {
+  width: 231px;
   margin-right: 70px;
 }
 .footer .logo {
@@ -569,14 +570,13 @@ textarea {
 
   color: #fff;
 }
-.footer-address {
-  display: flex;
-}
+
 .footer-address-item:not(:last-child) {
   margin-bottom: 9px;
 }
 .footer-address-map,
 .footer-address-link {
+  display: inline-block;
   font-style: normal;
   font-size: 14px;
   line-height: 1.71;
@@ -586,8 +586,6 @@ textarea {
   margin: 0;
 }
 .footer-address-link {
-  display: inline-block;
-
   color: rgba(255, 255, 255, 0.6);
 
   transition: color 250ms var(--timing-function);
@@ -631,6 +629,7 @@ textarea {
 .footer-social-icon {
   fill: var(--white-text-color);
 }
+
 .subscr-field {
   display: flex;
 }
@@ -729,9 +728,7 @@ textarea {
 .modal-close-btn:focus {
   color: var(--accent-color);
 }
-.modal-form * {
-  /* outline: 1px solid red; */
-}
+
 .modal-action {
   display: block;
   margin-bottom: 12px;
@@ -773,10 +770,13 @@ textarea {
 
   transition: border-color 250ms var(--timing-function);
 }
+.form-input:hover,
 .form-input:focus,
+.form-textarea:hover,
 .form-textarea:focus {
   border-color: var(--accent-color);
 }
+.form-input:hover + .input-icon,
 .form-input:focus + .input-icon {
   color: var(--accent-color);
 }
